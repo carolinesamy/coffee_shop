@@ -98,7 +98,7 @@ def check_permission(permissions, payload):
         abort(400)
     for permission in permissions:
         if permission not in payload['permissions']:
-            abort(403)
+            abort(401)
     return True
 
 def requires_auth(permission=''):
